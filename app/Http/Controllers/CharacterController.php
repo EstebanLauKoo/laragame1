@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Character;
-use App\Enemies;
 use Illuminate\Http\Request;
 
 class CharacterController extends Controller
@@ -15,8 +14,7 @@ class CharacterController extends Controller
      */
     public function index()
     {
-        return view('character', ['character' => Character::all(),
-                                    'enemies' => Enemies::all()]);
+        return view('character.index', ['character' => Character::all()]);
     }
 
     /**
