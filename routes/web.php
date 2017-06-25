@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 
 Route::resource('/', 'CharacterController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
